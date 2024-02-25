@@ -6,16 +6,15 @@ public class PlayerMovement : MonoBehaviour
 {
     public float MoveSpeed;
     public Transform Orientation;
+    public Rigidbody _rigidbody;
 
     float _horizontalInput;
     float _verticalInput;
 
     Vector3 _moveDirection;
 
-    Rigidbody _rigidbody;
     private void Start()
     {
-        _rigidbody = GetComponent<Rigidbody>();
         _rigidbody.freezeRotation = true;
     }
 

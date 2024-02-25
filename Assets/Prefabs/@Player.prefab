@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 1365664959215372654}
   - component: {fileID: 8287273875710026640}
   - component: {fileID: 1325679864790243723}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -120,7 +120,7 @@ GameObject:
   - component: {fileID: 5878055175239196505}
   - component: {fileID: 7580272542758663383}
   - component: {fileID: 8862035004303700083}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -269,7 +269,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6981989056393573915}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: CameraPositon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -302,7 +302,7 @@ GameObject:
   - component: {fileID: 4842653857639525115}
   - component: {fileID: 3174821200341582381}
   - component: {fileID: 7561059426496374824}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: '@Player'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -378,7 +378,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3975990861783523565}
   - component: {fileID: 1360946585865265368}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: CameraHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -423,7 +423,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3892476845312922596}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Orientation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -454,9 +454,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5973788903879472681}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: '@Player'
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
