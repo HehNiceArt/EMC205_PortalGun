@@ -9,14 +9,20 @@ public class PortalGun : MonoBehaviour
 {
     [SerializeField] private Camera _cam;
     public CapsuleCollider PlayerCollider;
+    public GameObject PortalTag;
+
+    [Header("Layers")]
     [SerializeField] private LayerMask _wallLayer;
     [SerializeField] private LayerMask _floorLayer;
     [SerializeField] private LayerMask _portalLayer;
+
+    [Header("Prefabs")]
     [SerializeField] private GameObject _bluePortalPrefab;
     [SerializeField] private GameObject _redPortalPrefab;
 
-    [SerializeField] private GameObject _bluePortal;
-    [SerializeField] private GameObject _redPortal;
+    [Header("Portals")]
+    public GameObject _bluePortal;
+    public GameObject _redPortal;
 
     private static PortalGun _instance;
     private void Awake()
@@ -65,17 +71,29 @@ public class PortalGun : MonoBehaviour
         if (portal != null) { Destroy(portal); }
         portal = _newPortal;
     }
-
-    private void OnTriggerStay(Collider other)
+    public void Teleport(GameObject teleportObject, GameObject other)
     {
-        if (other.CompareTag("Player") || other.GetComponent<Rigidbody>() != null)
+        if (teleportObject == null) { return; }
+
+        PortalTag = other;
+
+        Debug.Log("Object to teleport: " + teleportObject.name);
+
+        if (teleportObject.CompareTag("Player") || teleportObject.CompareTag("Teleportables"))
         {
-            Teleport(other.gameObject);
+            CheckWhichTeleporter(teleportObject, PortalTag);
         }
-            Debug.Log("aa");
     }
-    void Teleport(GameObject teleportObject)
+    void CheckWhichTeleporter(GameObject teleportObject, GameObject portalTag)
     {
-
+        if(_bluePortal != null && teleportObject != null || portalTag.CompareTag("BlueTag"))
+        {
+            teleportObject.transform.position = _redPortal.transform.position;
+            Debug.Log("aaaa");
+        }
+        else if(_redPortal != null && teleportObject != null || portalTag.CompareTag("RedPortal"))
+        {
+            teleportObject.transform.position = _bluePortal.transform.position;
+        }
     }
 }

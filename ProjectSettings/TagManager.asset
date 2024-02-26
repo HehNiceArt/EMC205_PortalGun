@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Floor
   - Wall
+  - Teleportables
+  - BluePortal
+  - RedPortal
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -19,9 +23,9 @@ TagManager:
   - Wall
   - Teleportables
   - BackWall
-  - Portalable
   - 
-  - 
+  - RedPortal
+  - BluePortal
   - 
   - 
   - 
